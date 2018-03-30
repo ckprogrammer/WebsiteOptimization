@@ -25,7 +25,7 @@ This optimized webpage ([index.html](https://ckprogrammer.github.io/WebsiteOptim
 * I removed the google fonts styles link.
 
 ## Optimizations I made to ```views/js/main.js``` (pizza.html)
-* This is what I changed to make the pizza sizes change faster: 
+* This is what I changed to make the pizza sizes change faster:
 ```
   function changePizzaSizes(size) {
   var elementsOfPizza = document.querySelectorAll(".randomPizzaContainer");
@@ -36,7 +36,7 @@ This optimized webpage ([index.html](https://ckprogrammer.github.io/WebsiteOptim
   }
 }
 ```
-I did this, so that I store randomPizzaContainer in elementsOfPizza.
+I did this, so that I store randomPizzaContainer in elementsOfPizza instead of re-running it many times.
 
 * To make the scrolling of the page faster, I changed all of the ```ScrollTop``` to ```ScrollY``` because ```ScrollTop``` is no longer accepted in chrome. I researched using this link: https://stackoverflow.com/questions/20514596/document-documentelement-scrolltop-return-value-differs-in-chrome
 
