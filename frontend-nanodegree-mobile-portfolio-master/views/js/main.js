@@ -506,9 +506,9 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
-  var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+  var scrollY = document.documentElement.scrollY || document.scrollingElement.scrollTop;
   for (var i = 0; i < items.length; i++) {
-    // document.body.scrollTop is no longer supported in Chrome.
+    // document.body.scrollTop is no longer supported in Chrome. This is why I changed the ScrollTop to ScrollY.
     var phase = Math.sin((scrollY / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
