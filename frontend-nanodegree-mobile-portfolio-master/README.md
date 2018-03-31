@@ -7,7 +7,7 @@ This is the Project Website Optimizations on [Udacity's Front End Web Developer 
 
 In this project I had to optimize the portfolio, by improving performance-related issues.
 
-This optimized webpage ([index.html](https://ckprogrammer.github.io/WebsiteOptimization/frontend-nanodegree-mobile-portfolio-master/index.html)) has a ```PageSpeed``` score of 92.
+This optimized webpage ([index.html](https://ckprogrammer.github.io/WebsiteOptimization/frontend-nanodegree-mobile-portfolio-master/index.html)) has a ```PageSpeed``` score of 91.
 
 ## Downloading this application
 1. Click on the ```Clone or Download``` button at the top of the github page.
@@ -41,7 +41,7 @@ I did this, so that I store randomPizzaContainer in elementsOfPizza instead of r
 *
 ```
 var items = document.querySelectorAll('.mover');
-var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+var scrollY = document.documentElement.scrollY || document.scrollingElement.scrollTop;
 for (var i = 0; i < items.length; i++) {
   // document.body.scrollTop is no longer supported in Chrome. This is why I changed the ScrollTop to ScrollY.
   var phase = Math.sin((scrollY / 1250) + (i % 5));
